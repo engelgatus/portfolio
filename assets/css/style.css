@@ -1,0 +1,94 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(../images/bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat; 
+	color: #black;
+	border-radius: 10px;
+	
+
+}
+
+h1 {
+	font-size: 50px;
+	background-color: #333; /*off-black*/
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	letter-spacing: 3px;
+	border-radius: 10px;
+	font-family: 'Slabo 27px', sans-serif;
+	color: #EDE7E5;
+	background-color: rgba(51,51,51,0.5);
+
+
+}
+/*end of h1 styling*/
+
+/*start of h2 element styling*/
+h2 {
+	color: yellow;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin-bottom: 15px;
+	background-color: #333;
+	padding: 10px;
+	margin-bottom: 1px;
+	border-radius: 10px;
+	font-family: 'Slabo 27px', sans-serif;
+	background-color: rgba(51,51,51,0.5);
+
+}
+
+/*end of h2 styling*/
+
+/*targets the class element bio*/
+
+.bio {
+	font-size: 18px;
+	line-height: 1.75;
+	/*background-color: #333;
+	opacity: 0.5;*/
+	background-color: rgba(51,51,51,0.5);
+	margin-top: 10px;
+	border-radius: 10px;
+	font-family: 'Abel', sans-serif;
+	color: #D0CCCB;
+
+}
+
+/*end of bio*/
+
+/*targets the html id attribute me*/
+
+#me	{
+	height: 200px;
+	width: 185px;
+	border-radius: 50%;
+	border-width: 3px;
+	border-color: #EDE7E5;
+	border-style: solid;
+	margin-top: 50px;
+	margin-bottom: 25px;
+
+
+}
+
+/*end of me*/
+
+/*targets class container*/
+
+.container {
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+
+}
+
+/*end of container*/
+
