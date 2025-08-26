@@ -27,6 +27,11 @@
   }
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 16px;
+  }
+}
 
 :root {
   	--bg-beige: #F5F3EF;
@@ -38,6 +43,12 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+a:focus,
+.button:focus {
+  outline: 2px dashed var(--accent-gold);
+  outline-offset: 4px;
 }
 
 @keyframes fadeInUp {
@@ -172,10 +183,10 @@ body {
 /*end of profile pic*/
 
 /*resume section*/
-.resume-section,
 .tech-stack {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    margin-top: 20px;
+    padding-top: 20px; /* was 30px */
+    padding-bottom: 20px;
 }
 
 .resume-section {
@@ -188,7 +199,19 @@ body {
     color: var(--text-dark);
 	max-width: 800px;
     margin: 40px auto;
+    padding-top: 60px;
+    padding-bottom: 10px;
 }
+
+.resume-section::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin: 40px auto 0;
+}
+
 
 .resume-section h3 {
     font-size: 24px;
@@ -288,60 +311,70 @@ body {
 	background-color: var(--accent-navy);
 }
 
-/* Tech Stack Icons */
+/* Tech Stack | Other Skills Icons */
 .skill-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 20px;
-  margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
-
-.skill-icons img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 8px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-icons img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Other Skills Icons */
 
 .other-skill-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 20px;
-  margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+    margin-bottom: 4px;
 }
 
+.skill-icons img,
 .other-skill-icons img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 8px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.skill-icons img:hover,
 .other-skill-icons img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.icon-block {
+    position: relative;
+    display: inline-block;
+}
 
+.icon-block::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent-navy);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: 'Abel', sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.icon-block:hover::after {
+    opacity: 1;
+}
 
 /* Resume Download Button */
 
@@ -364,10 +397,30 @@ body {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
+.resume-download {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
 
+.resume-download.section {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.resume-download::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 30px auto 0;
+}
+
+/* Footer Styles */
 .site-footer {
-    margin-top: 60px;
-    padding: 60px 0;
+    margin-top: 30px;
+    padding: 30px 0;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.6);
     border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -396,6 +449,26 @@ body {
 .social-links a:hover {
     color: var(--accent-gold);
 }
+
+/* Attribution Styles */
+.attribution {
+    font-size: 12px;
+    color: rgba(42, 42, 42, 0.6);
+    margin-top: 10px;
+    font-family: 'Abel', sans-serif;
+}
+
+.attribution a {
+    color: var(--accent-navy);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(42, 42, 42, 0.3);
+}
+
+.attribution a:hover {
+    color: var(--accent-gold);
+    border-bottom: 1px solid var(--accent-gold);
+}
+
 
 /* Back to Top Button */
 .back-to-top {
