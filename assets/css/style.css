@@ -31,8 +31,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
