@@ -1,43 +1,215 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="UTF-8">
-	<title> Engel Gatus | Web Developer </title>
+    <meta charset="UTF-8">
+    <title> Engel Gatus | Web Developer </title>
 
-	<!-- external css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- external css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
 
-	<!-- Google Font Slabo27px -->
-	<link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
-
-	<!-- Google Font Anton -->
-	<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
-
-	<!-- Google Font Abel -->
-	<link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
-
-
-
-
+	<!-- AOS Library -->
+	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 </head>
-<body>
 
-	<div class="container">
+<body id="top">
 
-	<img id="me" src="assets/images/me.jpg">
+	<header class="sticky-header">
+    	<h1>Engel Gatus</h1>
+    	<h2>Virtual Operations Specialist</h2>
+	</header>
 
-	<h1>engel gatus</h1>
-	<h2>full stack web developer</h2>
+    <div class="container">
 
-		<p class="bio"> 
-			Engel Gatus is currently a student at Zuitt Coding Boot Camp. Plans to become an awesome game developer in the future.
+        <div class="profile-pic-wrapper">
+            <img id="profile-pic" src="assets/images/me.jpg" alt="Profile photo of Engel Gatus">
+        </div>
+
+        <p class="bio"> 
+            Engel Gatus is a results-oriented professional with over four years of experience in process optimization, purchasing, and operations. He is a certified full-stack web developer with a strong technical foundation and a data-driven approach. Currently based in Makati, Philippines, Engel is committed to continuous growth and exceeding goals.
+        </p>
+
+	<!-- <div class="projects-section">
+		<h3>Featured Projects</h3>
+		<div class="projects-grid">
+			<div class="project-card">
+				<h4>DevPortfolio</h4>
+				<p>A personal portfolio site built with HTML, CSS, and GitHub Pages. Includes sprite art and branding assets.</p>
+				<a href="https://engelgatus.github.io/devportfolio/" target="_blank">View Project</a>
+			</div>
+			<div class="project-card">
+				<h4>Sprite Overlay Pack</h4>
+				<p>Custom-designed sprite overlays with cultural accuracy and vibrant color palettes.</p>
+				<a href="#" target="_blank">Preview Art</a>
+			</div>
+		</div>
+	</div> -->
+
+
+	<!-- Resume Section -->
+	<div class="section resume-section" data-aos="fade-up">
+
+		<h3 id="summary" data-aos="fade-up">Professional Summary</h3>
+		<p data-aos="fade-up" data-aos-delay="100">
+			Engel has a proven track record in managing high-volume workflows, improving team efficiency, and driving customer satisfaction. His background includes hands-on experience with Airtable, Keepa, and eBay, handling sourcing, listings, and fulfillment to maximize profit.
 		</p>
-		
+
+		<h3 id="skills" data-aos="fade-up">Key Skills</h3>
+		<ul class="skills" data-aos="fade-up">
+			<li data-aos="fade-up" data-aos-delay="100">Problem Solving</li>
+			<li data-aos="fade-up" data-aos-delay="200">Process Optimization & Efficiency</li>
+			<li data-aos="fade-up" data-aos-delay="300">Communication & Collaboration</li>
+			<li data-aos="fade-up" data-aos-delay="400">Flexibility & Adaptability</li>
+		</ul>
+
+		<h3 id="experience">Professional Experience</h3>
+
+		<h4>Virtual Operations Specialist, BSV LLC (Nov 2024 – Jul 2025)</h4>
+			<h5 data-aos="fade-up">Purchasing</h5>
+			<ul>
+				<li>Supported revenue growth from ~$10K in January to $100K+ monthly within five months.</li>
+				<li>Oversaw secure banking activities, credit account management, and verification processes for the owner.</li>
+				<li>Executed purchasing decisions to maintain inventory levels aligned with sales goals.</li>
+				<li>Tracked and organized leads using Airtable to support timely procurement.</li>
+			</ul>
+
+			<h5 data-aos="fade-up" data-aos-delay="150">Business Development Officer</h5>
+			<ul>
+				<li>Streamlined internal Airtable systems by creating formulas and workflows to improve team efficiency.</li>
+				<li>Identified process bottlenecks and implemented low-code solutions to support scalability.</li>
+				<li>Contributed to operational improvements that reduced manual tasks and improved decision-making speed.</li>
+			</ul>
+
+			<h5 data-aos="fade-up" data-aos-delay="150">Sourcing</h5>
+			<ul>
+				<li>Researched online marketplaces to identify profitable, in-demand products.</li>
+				<li>Monitored pricing trends and seller competition to guide purchasing strategy.</li>
+				<li>Assessed product viability through data-driven research and margin analysis.</li>
+			</ul>
+
+			<h5 data-aos="fade-up" data-aos-delay="150">eBay Store Operations</h5>
+			<ul>
+				<li>Managed eBay listings, pricing updates, and product descriptions for accuracy and appeal.</li>
+			</ul>
+
+		<h4>Remote Chat Support Specialist, Teletech Philippines (Jan 2021 – Apr 2021)</h4>
+		<ul data-aos="fade-up">
+			<li>Resolved customer inquiries efficiently via chat tools</li>
+			<li>Ranked among top performers based on key metrics</li>
+		</ul>
+
+		<h4>Assistant Restaurant Manager, Jollibee N. Domingo (Mar 2017 – Feb 2019)</h4>
+		<ul data-aos="fade-up">
+			<li>Led daily operations and in-store promotions</li>
+			<li>Received consecutive Gold Standard Awards</li>
+			<li>Improved admin efficiency with custom Excel tools</li>
+		</ul>
+
+		<h4>Assistant Supervisor, Gourmet Farms Inc. (Mar 2015 – Jul 2016)</h4>
+		<ul data-aos="fade-up">
+			<li>Handled cashier duties and customer service</li>
+			<li>Demonstrated strong teamwork and attention to detail</li>
+		</ul>
+
+		<h3 id="education">Education & Training</h3>
+		<ul data-aos="fade-up">
+			<li>Full Stack Development, Zuitt Coding Bootcamp (Jun – Sep 2019)</li>
+			<li>Bachelor's in Hotel & Hospitality Management, PLM (2009 – 2014)</li>
+		</ul>
+
+		<div id="tech-stack" class="tech-stack" data-aos="fade-up">
+			<h3>Tech Stack</h3>
+			<div class="skill-tags">
+				<span data-aos="fade-up" data-aos-delay="100">HTML</span>
+				<span data-aos="fade-up" data-aos-delay="200">CSS</span>
+				<span data-aos="fade-up" data-aos-delay="300">Python</span>
+				<span data-aos="fade-up" data-aos-delay="400">JavaScript</span>
+			</div>
+
+			<h3>Other Skills</h3>
+			<div class="skill-tags">
+				<span data-aos="fade-up" data-aos-delay="500">Airtable</span>
+				<span data-aos="fade-up" data-aos-delay="600">Google Suite</span>
+				<span data-aos="fade-up" data-aos-delay="700">Microsoft Office</span>
+				<span data-aos="fade-up" data-aos-delay="800">Keepa</span>
+				<span data-aos="fade-up" data-aos-delay="900">Marter</span>
+			</div>
+		</div>
 	</div>
+
+		<!-- Resume Download Link -->
+	<div id="resume-download" class="section resume-download" data-aos="fade-left" data-aos-delay="100">
+			<a class="button" href="assets/docs/Resume - Engel Gatus.pdf" download>
+				Download Resume
+			</a>
+		</div>
+    </div>
+
+	<footer class="section site-footer" data-aos="fade-in">
+		<p>© 2025 Engel Gatus</p>
+		<div class="social-links">
+			<a href="https://www.linkedin.com/in/engelgatus/" target="_blank">LinkedIn</a>
+			<a href="https://github.com/engelgatus" target="_blank">GitHub</a>
+		</div>
+	</footer>
+
+	<a href="#top" class="back-to-top" title="Back to Top">↑</a>
+
+	<script>
+	AOS.init({
+		duration: 800,
+		once: true,
+		easing: 'ease-in-out',
+		anchorPlacement: 'top-bottom',
+		offset: 120
+	});
+	</script>
+
+	<!-- Floating Navigation Menu -->
+
+	<nav class="floating-menu hidden">
+		<a href="#summary" title="Summary">
+			<img src="assets/icons/summary.gif" class="nav-icon" alt="Summary Icon">
+		</a>
+		<a href="#skills" title="Skills">
+			<img src="assets/icons/skills.gif" class="nav-icon" alt="Skills Icon">
+		</a>
+		<a href="#experience" title="Experience">
+			<img src="assets/icons/experience.gif" class="nav-icon" alt="Experience Icon">
+		</a>
+		<a href="#education" title="Education">
+			<img src="assets/icons/education.gif" class="nav-icon" alt="Education Icon">
+		</a>
+		<a href="#tech-stack" title="Tech Stack">
+			<img src="assets/icons/tech-stack.gif" class="nav-icon" alt="Tech Icon">
+		</a>
+	</nav>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const floatingMenu = document.querySelector('.floating-menu');
+			const triggerElement = document.querySelector('#resume-download');
+			let hasTriggered = false;
+
+			window.addEventListener('scroll', () => {
+			const triggerTop = triggerElement.getBoundingClientRect().top;
+
+			if (!hasTriggered && triggerTop < window.innerHeight) {
+				floatingMenu.classList.remove('hidden');
+				floatingMenu.classList.add('visible');
+				hasTriggered = true;
+			}
+			});
+		});
+	</script>
 
 </body>
 </html>
