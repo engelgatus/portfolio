@@ -19,6 +19,15 @@
     }
 }
 
+@media (max-width: 600px) {
+  .skill-icons img {
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+  }
+}
+
+
 :root {
   	--bg-beige: #F5F3EF;
   	--text-dark: #2E2E2E;
@@ -278,6 +287,61 @@ body {
     cursor: default;
 	background-color: var(--accent-navy);
 }
+
+/* Tech Stack Icons */
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.skill-icons img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-icons img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Other Skills Icons */
+
+.other-skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.other-skill-icons img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.other-skill-icons img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
 
 /* Resume Download Button */
 
