@@ -189,30 +189,37 @@
 		<span>OR</span>
 	</div>
 
-	<!-- Contact -->
-	<div class="form-section" data-aos="fade-up">
-	<h3 id="contact">Contact me</h3>
+	
+	<div class="form-columns">
+		<!-- Contact -->
+		<div class="form-section" data-aos="fade-up">
+		<h3 id="contact">Contact me</h3>
+			<form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+				<!-- Web3Forms access key -->
+				<input type="hidden" name="access_key" value="5e85a61d-094f-4a68-a69a-f3df6832d1f3" />
 
-	<form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-		<!-- Web3Forms access key -->
-		<input type="hidden" name="access_key" value="5e85a61d-094f-4a68-a69a-f3df6832d1f3" />
+				<input type="hidden" name="subject" value="SOMEONE MADE CONTACT" />
 
-		<input type="hidden" name="subject" value="SOMEONE MADE CONTACT" />
+				<!-- Honeypot -->
+				<input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
-		<!-- Honeypot -->
-		<input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" required>
 
-		<label for="name">Name</label>
-		<input type="text" name="name" id="name" required>
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" required>
 
-		<label for="email">Email</label>
-		<input type="email" name="email" id="email" required>
+				<label for="message">Message</label>
+				<textarea name="message" id="message" rows="6" placeholder="Please include your company details, intent and other important stuff!"required></textarea>
 
-		<label for="message">Message</label>
-		<textarea name="message" id="message" rows="6" required></textarea>
-
-		<button type="submit" class="button">Send Message</button>
-	</form>
+				<div class="button-row">
+					<button type="submit" class="button">Send Message</button>
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLSeFKIfG_hRJVxcwvDqTQOoxP4umRKl2CJYVugeAPSE23wRy6Q/viewform?usp=dialog" class="button alt-button" target="_blank">
+						📅 Request a Booking Instead
+					</a>
+				</div>
+			</form>
+		</div>
 	</div>
 
 	<footer class="section site-footer" data-aos="fade-in">
@@ -229,13 +236,13 @@
 	<a href="#top" class="back-to-top" title="Back to Top">↑</a>
 
 	<script>
-	AOS.init({
-		duration: 800,
-		once: true,
-		easing: 'ease-in-out',
-		anchorPlacement: 'top-bottom',
-		offset: 120
-	});
+		AOS.init({
+			duration: 800,
+			once: true,
+			easing: 'ease-in-out',
+			anchorPlacement: 'top-bottom',
+			offset: 120
+		});
 	</script>
 
 	<!-- Floating Nav Menu -->
@@ -260,7 +267,6 @@
 		<a href="#contact" class="nav-link" title="Contact">
 			<img src="assets/icons/contact.gif" class="nav-icon" alt="Contact">
 		</a>
-
 	</nav>
 
 	<script>
