@@ -20,6 +20,46 @@
 
 </head>
 
+<script>
+  (function () {
+    const form = document.getElementById('contact-form');
+    const successEl = document.getElementById('contact-success');
+    const errorEl = document.getElementById('contact-error');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      successEl.style.display = 'none';
+      errorEl.style.display = 'none';
+
+      const formData = new FormData(form);
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: formData
+        });
+
+        if (res.ok) {
+          successEl.style.display = 'block';
+          form.reset();
+        } else {
+          errorEl.style.display = 'block';
+        }
+      } catch (err) {
+        errorEl.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  })();
+</script>
+
+
 <body id="top">
 
 	<header class="sticky-header">
@@ -186,6 +226,45 @@
 		</div>
     </div>
 
+	<div class="or-divider" aria-hidden="true">
+		<span>OR</span>
+	</div>
+
+
+		<!-- Contact -->
+	<div class="form-section" data-aos="fade-up">
+	<h3 id="contact">Contact me</h3>
+
+	<!-- Success/Fail messages -->
+	<p id="contact-success" style="display:none; color: #2b7a2f; margin-bottom: 16px;">
+		Thanks! Your message was sent.
+	</p>
+	<p id="contact-error" style="display:none; color: #b00020; margin-bottom: 16px;">
+		Sorry — something went wrong. Please try again.
+	</p>
+
+	<form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+		<!-- Web3Forms access key -->
+		<input type="hidden" name="access_key" value="5e85a61d-094f-4a68-a69a-f3df6832d1f3" />
+
+		<input type="hidden" name="subject" value="SOMEONE MADE CONTACT" />
+
+		<!-- Honeypot: bots will fill this, humans won’t -->
+		<input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name" required>
+
+		<label for="email">Email</label>
+		<input type="email" name="email" id="email" required>
+
+		<label for="message">Message</label>
+		<textarea name="message" id="message" rows="6" required></textarea>
+
+		<button type="submit" class="button">Send Message</button>
+	</form>
+	</div>
+
 	<footer class="section site-footer" data-aos="fade-in">
 		<p>© 2025 Engel Gatus</p>
 		<div class="social-links">
@@ -227,6 +306,11 @@
 		<a href="#tech-stack" class="nav-link" title="Tech Stack">
 			<img src="assets/icons/tech-stack.gif" class="nav-icon" alt="Tech Icon">
 		</a>
+		<!-- contact -->
+		<a href="#contact" class="nav-link" title="Contact">
+			<img src="assets/icons/contact.gif" class="nav-icon" alt="Contact">
+		</a>
+
 	</nav>
 
 	<script>
