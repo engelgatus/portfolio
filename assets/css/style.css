@@ -21,15 +21,31 @@
 
 @media (max-width: 600px) {
   .skill-icons img {
-    width: 40px;
-    height: 40px;
-    padding: 6px;
+        width: 40px;
+        height: 40px;
+        padding: 6px;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 20px 16px;
+        padding: 20px 16px;
+  }
+  .role-cards {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px;
+        /* grid-template-columns: 1fr !important; */
+  }
+  .role-card {
+        width: 100%;
+  }
+  .role-card h5 {
+        font-size: 15px;
+  }
+  .role-card li {
+        font-size: 13px;
+        line-height: 1.5;
   }
 }
 
@@ -47,8 +63,8 @@ html {
 
 a:focus,
 .button:focus {
-  outline: 2px dashed var(--accent-gold);
-  outline-offset: 4px;
+    /* outline: 2px dashed var(--accent-gold); */
+    outline-offset: 4px;
 }
 
 /* Animations */
@@ -337,8 +353,8 @@ body {
 
 .role-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-top: 20px;
 }
 
@@ -348,7 +364,7 @@ body {
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     cursor: pointer;
-    position: relative; /* so the pseudo-element stays inside */
+    position: relative; /* pseudo-element stays inside */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* border-top: 4px solid var(--accent-gold); Echo skill tags */
 }
@@ -389,7 +405,6 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
-
 
 /* Tech Stack | Other Skills Icons */
 
@@ -471,6 +486,7 @@ body {
 	background-color: var(--accent-navy);
 	color: #fff;
 	will-change: transform;
+    cursor: pointer
 }
 
 .button:hover {
@@ -701,7 +717,7 @@ h3[id] {
 }
 
 .nav-link:focus {
-  outline: none;
+    outline: none;
 }
 
 /*targets class container*/

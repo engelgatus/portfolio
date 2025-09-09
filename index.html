@@ -21,46 +21,6 @@
 
 </head>
 
-<script>
-  (function () {
-    const form = document.getElementById('contact-form');
-    const successEl = document.getElementById('contact-success');
-    const errorEl = document.getElementById('contact-error');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      successEl.style.display = 'none';
-      errorEl.style.display = 'none';
-
-      const formData = new FormData(form);
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
-
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: formData
-        });
-
-        if (res.ok) {
-          successEl.style.display = 'block';
-          form.reset();
-        } else {
-          errorEl.style.display = 'block';
-        }
-      } catch (err) {
-        errorEl.style.display = 'block';
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-      }
-    });
-  })();
-</script>
-
-
 <body id="top">
 
 	<header class="sticky-header">
@@ -82,145 +42,143 @@
 			Now I’m building my career as a freelancer. It’s still early days, but I’m enjoying the challenge, the freedom, and the chance to keep growing while figuring out where I can make the biggest impact.
         </p>
 
-	<!-- <div class="projects-section">
-		<h3>Featured Projects</h3>
-		<div class="projects-grid">
-			<div class="project-card">
-				<h4>DevPortfolio</h4>
-				<p>A personal portfolio site built with HTML, CSS, and GitHub Pages. Includes sprite art and branding assets.</p>
-				<a href="https://engelgatus.github.io/devportfolio/" target="_blank">View Project</a>
-			</div>
-			<div class="project-card">
-				<h4>Sprite Overlay Pack</h4>
-				<p>Custom-designed sprite overlays with cultural accuracy and vibrant color palettes.</p>
-				<a href="#" target="_blank">Preview Art</a>
-			</div>
-		</div>
-	</div> -->
-
-
-	<!-- Resume Section -->
-	<div class="section resume-section" data-aos="fade-up">
-
-		<h3 id="summary" data-aos="fade-up">Professional Summary</h3>
-		<p data-aos="fade-up" data-aos-delay="100">
-			I started out in freelancing with BSV LLC, where I handled purchasing and operations. I managed high-volume workflows, making sure problem orders were resolved and purchases got fulfilled, and troubleshooting the small issues that came up along the way. Alongside that, I got hands-on with eCommerce: sourcing products, handling listings in eBay Seller Hub, and tracking sales performance with tools like Keepa and DataSpark.<br>
-			<br>
-			Earlier in my career, I built a strong foundation in hospitality and service, working my way up to Assistant Restaurant Manager. Those years taught me leadership, attention to detail, and how to keep things running under pressure — skills I still carry into every role today.<br>
-			<br>
-			Along the way, I picked up experience building low-code solutions in Airtable to organize processes better. I also completed a full-stack web development bootcamp, which gave me a strong foundation in how systems, APIs, and automations work — something I lean on whenever I’m setting up tools or figuring out new platforms quickly.<br>
-			<br>
-			What drives me now is combining that mix of operations know-how and technical curiosity to help businesses run smoother, stay organized, and grow.<br>
-		</p>
-
-		<h3 id="skills" data-aos="fade-up">Key Skills</h3>
-		<ul class="skills" data-aos="fade-up">
-			<li data-aos="fade-up" data-aos-delay="100">Problem Solving</li>
-			<li data-aos="fade-up" data-aos-delay="200">Process Optimization & Efficiency</li>
-			<li data-aos="fade-up" data-aos-delay="300">Communication & Collaboration</li>
-			<li data-aos="fade-up" data-aos-delay="400">Flexibility & Adaptability</li>
-		</ul>
-
-		<h3 id="experience" data-aos="fade-up" data-aos-delay="500">Professional Experience</h3>
-		<div data-aos="fade-up" data-aos-delay="550">
-			<h4>Virtual Operations Specialist, BSV LLC (Nov 2024 – Jul 2025)</h4>
-				<div class="role-cards">
-  
-		<div class="role-card">
-			<h5>Purchasing</h5>
-				<ul>
-					<li>Helped scale revenue from about $10K to over $100K a month in just five months by making smart purchasing decisions and keeping inventory flowing. Handled secure banking and account management, and kept leads organized in Airtable</li>
-				</ul>
-		</div>
-
-		<div class="role-card">
-			<h5>Business Development Officer</h5>
-				<ul>
-					<li>Built and streamlined Airtable systems with formulas and workflows, cutting down on bottlenecks and implemented solutions. These tweaks made it easier to spot issues early and speed up decision-making for the team.</li>
-				</ul>
-		</div>
-
-		<div class="role-card">
-			<h5>Sourcing</h5>
-				<ul>
-					<li>Dug through marketplaces to uncover profitable products, keeping an eye on pricing trends and competition. Used data to figure out which products were worth the investment and which ones to pass on.</li>
-				</ul>
-		</div>
-
-		<div class="role-card">
-			<h5>eBay Store Operations</h5>
-				<ul>
-					<li>Managed listings, pricing, and product descriptions for accuracy and appeal.</li>
-				</ul>
-		</div>
-
-		</div>
-
-			<h4>Remote Chat Support Specialist, Teletech Philippines (Jan 2021 – Apr 2021)</h4>
-			<ul data-aos="fade-up">
-				<li>Handled customer inquiries through chat with speed and accuracy, making sure issues were resolved clearly. Consistently ranked among the top performers on key metrics during my time with the team.</li>
-			</ul>
-
-			<h4>Assistant Restaurant Manager, Jollibee N. Domingo (Mar 2017 – Feb 2019)</h4>
-			<ul data-aos="fade-up">
-				<li>Handled day-to-day operations and rolled out in-store promotions to drive sales. Created simple Excel solutions that cut down admin work and improved efficiency. Earned consecutive Gold Standard Awards for performance and leadership. </li>
-			</ul>
-
-			<h4>Assistant Supervisor, Gourmet Farms Inc. (Mar 2015 – Jul 2016)</h4>
-			<ul data-aos="fade-up">
-				<li>Supported front-of-house operations by handling cashier duties and assisting customers. Built strong teamwork skills and attention to detail in a fast-paced service environment.</li>
-			</ul>
-		</div>
-
-		<h3 id="education">Education & Training</h3>
-		<ul data-aos="fade-up">
-			<li>Full Stack Development, Zuitt Coding Bootcamp (Jun – Sep 2019)</li>
-			<li>Bachelor's in Hotel & Hospitality Management, PLM (2009 – 2014)</li>
-		</ul>
-
-		<div class="tech-stack" data-aos="fade-up">
-			<h3 id="tech-stack">Tech Stack</h3>
-			<div class="skill-icons">
-				<div class="icon-block" data-label="HTML">
-					<img data-aos="fade-up" data-aos-delay="100" src="assets/icons/html.png" alt="HTML" title="HTML">
+		<!-- <div class="projects-section">
+			<h3>Featured Projects</h3>
+			<div class="projects-grid">
+				<div class="project-card">
+					<h4>DevPortfolio</h4>
+					<p>A personal portfolio site built with HTML, CSS, and GitHub Pages. Includes sprite art and branding assets.</p>
+					<a href="https://engelgatus.github.io/devportfolio/" target="_blank">View Project</a>
 				</div>
-				<div class="icon-block" data-label="CSS">
-					<img data-aos="fade-up" data-aos-delay="200" src="assets/icons/css.png" alt="CSS" title="CSS">
-				</div>
-				<div class="icon-block" data-label="Bootstrap">
-					<img data-aos="fade-up" data-aos-delay="300" src="assets/icons/bootstrap.png" alt="Bootstrap" title="Bootstrap">
-				</div>
-				<div class="icon-block" data-label="Python">
-					<img data-aos="fade-up" data-aos-delay="400" src="assets/icons/python.png" alt="Python" title="Python">
-				</div>
-				<div class="icon-block" data-label="JavaScript">	
-					<img data-aos="fade-up" data-aos-delay="500" src="assets/icons/javascript.png" alt="JavaScript" title="JavaScript">
-				</div>
-				<div class="icon-block" data-label="GitHub">	
-					<img data-aos="fade-up" data-aos-delay="600" src="assets/icons/github.png" alt="GitHub" title="GitHub">
+				<div class="project-card">
+					<h4>Sprite Overlay Pack</h4>
+					<p>Custom-designed sprite overlays with cultural accuracy and vibrant color palettes.</p>
+					<a href="#" target="_blank">Preview Art</a>
 				</div>
 			</div>
+		</div> -->
 
-			<h3>Other Skills</h3>
-			<div class="other-skill-icons">
-				<div class="icon-block" data-label="Airtable">				
-					<img data-aos="fade-up" data-aos-delay="700" src="assets/icons/airtable.png" alt="Airtable" title="Airtable">
+
+		<!-- Resume Section -->
+		<div class="section resume-section" data-aos="fade-up">
+
+			<h3 id="summary" data-aos="fade-up">Professional Summary</h3>
+				<p data-aos="fade-up" data-aos-delay="100">
+					I started out in freelancing with BSV LLC, where I handled purchasing and operations. I managed high-volume workflows, making sure problem orders were resolved and purchases got fulfilled, and troubleshooting the small issues that came up along the way. Alongside that, I got hands-on with eCommerce: sourcing products, handling listings in eBay Seller Hub, and tracking sales performance with tools like Keepa and DataSpark.<br>
+					<br>
+					Earlier in my career, I built a strong foundation in hospitality and service, working my way up to Assistant Restaurant Manager. Those years taught me leadership, attention to detail, and how to keep things running under pressure — skills I still carry into every role today.<br>
+					<br>
+					Along the way, I picked up experience building low-code solutions in Airtable to organize processes better. I also completed a full-stack web development bootcamp, which gave me a strong foundation in how systems, APIs, and automations work — something I lean on whenever I’m setting up tools or figuring out new platforms quickly.<br>
+					<br>
+					What drives me now is combining that mix of operations know-how and technical curiosity to help businesses run smoother, stay organized, and grow.<br>
+				</p>
+
+			<h3 id="skills" data-aos="fade-up">Key Skills</h3>
+				<ul class="skills" data-aos="fade-up">
+					<li data-aos="fade-up" data-aos-delay="100">Problem Solving</li>
+					<li data-aos="fade-up" data-aos-delay="200">Process Optimization & Efficiency</li>
+					<li data-aos="fade-up" data-aos-delay="300">Communication & Collaboration</li>
+					<li data-aos="fade-up" data-aos-delay="400">Flexibility & Adaptability</li>
+				</ul>
+
+			<h3 id="experience" data-aos="fade-up" data-aos-delay="500">Professional Experience</h3>
+				<div data-aos="fade-up" data-aos-delay="550">
+					<h4>Virtual Operations Specialist, BSV LLC (Nov 2024 – Jul 2025)</h4>
+						<div class="role-cards">
+							<div class="role-card">
+								<h5>Purchasing</h5>
+									<ul>
+										<li>Helped scale revenue from about $10K to over $100K a month in just five months by making smart purchasing decisions and keeping inventory flowing. Handled secure banking and account management, and kept leads organized in Airtable</li>
+									</ul>
+							</div>
+
+							<div class="role-card">
+								<h5>Business Development Officer</h5>
+									<ul>
+										<li>Built and streamlined Airtable systems with formulas and workflows, cutting down on bottlenecks and implemented solutions. These tweaks made it easier to spot issues early and speed up decision-making for the team.</li>
+									</ul>
+							</div>
+
+							<div class="role-card">
+								<h5>Sourcing</h5>
+									<ul>
+										<li>Dug through marketplaces to uncover profitable products, keeping an eye on pricing trends and competition. Used data to figure out which products were worth the investment and which ones to pass on.</li>
+									</ul>
+							</div>
+
+							<div class="role-card">
+								<h5>eBay Store Operations</h5>
+									<ul>
+										<li>Managed listings, pricing, and product descriptions for accuracy and appeal.</li>
+									</ul>
+							</div>
+						</div>
+
+					<h4>Remote Chat Support Specialist, Teletech Philippines (Jan 2021 – Apr 2021)</h4>
+						<ul data-aos="fade-up">
+							<li>Handled customer inquiries through chat with speed and accuracy, making sure issues were resolved clearly. Consistently ranked among the top performers on key metrics during my time with the team.</li>
+						</ul>
+
+						<h4>Assistant Restaurant Manager, Jollibee N. Domingo (Mar 2017 – Feb 2019)</h4>
+						<ul data-aos="fade-up">
+							<li>Handled day-to-day operations and rolled out in-store promotions to drive sales. Created simple Excel solutions that cut down admin work and improved efficiency. Earned consecutive Gold Standard Awards for performance and leadership. </li>
+						</ul>
+
+						<h4>Assistant Supervisor, Gourmet Farms Inc. (Mar 2015 – Jul 2016)</h4>
+						<ul data-aos="fade-up">
+							<li>Supported front-of-house operations by handling cashier duties and assisting customers. Built strong teamwork skills and attention to detail in a fast-paced service environment.</li>
+						</ul>
 				</div>
-				<div class="icon-block" data-label="Google Suite">					
-					<img data-aos="fade-up" data-aos-delay="800" src="assets/icons/google-suite.png" alt="Google Suite" title="Google Suite">
-				</div>
-				<div class="icon-block" data-label="Microsoft Office 365">					
-					<img data-aos="fade-up" data-aos-delay="900" src="assets/icons/microsoft-office.png" alt="Microsoft Office" title="Microsoft Office">
-				</div>
-				<div class="icon-block" data-label="Keepa">					
-					<img data-aos="fade-up" data-aos-delay="1000" src="assets/icons/keepa.png" alt="Keepa" title="Keepa">
-				</div>
+
+			<h3 id="education">Education & Training</h3>
+				<ul data-aos="fade-up">
+					<li>Full Stack Development, Zuitt Coding Bootcamp (Jun – Sep 2019)</li>
+					<li>Bachelor's in Hotel & Hospitality Management, PLM (2009 – 2014)</li>
+				</ul>
+
+			<div class="tech-stack" data-aos="fade-up">
+				<h3 id="tech-stack">Tech Stack</h3>
+					<div class="skill-icons">
+						<div class="icon-block" data-label="HTML">
+							<img data-aos="fade-up" data-aos-delay="100" src="assets/icons/html.png" alt="HTML" title="HTML">
+						</div>
+						<div class="icon-block" data-label="CSS">
+							<img data-aos="fade-up" data-aos-delay="200" src="assets/icons/css.png" alt="CSS" title="CSS">
+						</div>
+						<div class="icon-block" data-label="Bootstrap">
+							<img data-aos="fade-up" data-aos-delay="300" src="assets/icons/bootstrap.png" alt="Bootstrap" title="Bootstrap">
+						</div>
+						<div class="icon-block" data-label="Python">
+							<img data-aos="fade-up" data-aos-delay="400" src="assets/icons/python.png" alt="Python" title="Python">
+						</div>
+						<div class="icon-block" data-label="JavaScript">	
+							<img data-aos="fade-up" data-aos-delay="500" src="assets/icons/javascript.png" alt="JavaScript" title="JavaScript">
+						</div>
+						<div class="icon-block" data-label="GitHub">	
+							<img data-aos="fade-up" data-aos-delay="600" src="assets/icons/github.png" alt="GitHub" title="GitHub">
+						</div>
+					</div>
+
+				<h3>Other Skills</h3>
+					<div class="other-skill-icons">
+						<div class="icon-block" data-label="Airtable">				
+							<img data-aos="fade-up" data-aos-delay="700" src="assets/icons/airtable.png" alt="Airtable" title="Airtable">
+						</div>
+						<div class="icon-block" data-label="Google Suite">					
+							<img data-aos="fade-up" data-aos-delay="800" src="assets/icons/google-suite.png" alt="Google Suite" title="Google Suite">
+						</div>
+						<div class="icon-block" data-label="Microsoft Office 365">					
+							<img data-aos="fade-up" data-aos-delay="900" src="assets/icons/microsoft-office.png" alt="Microsoft Office" title="Microsoft Office">
+						</div>
+						<div class="icon-block" data-label="Keepa">					
+							<img data-aos="fade-up" data-aos-delay="1000" src="assets/icons/keepa.png" alt="Keepa" title="Keepa">
+						</div>
+					</div>
 			</div>
 		</div>
-	</div>
 
 		<!-- Resume Download Link -->
-	<div id="resume-download" class="section resume-download" data-aos="fade-left" data-aos-delay="100">
+		<div id="resume-download" class="section resume-download" data-aos="fade-left" data-aos-delay="100">
 			<a class="button" href="assets/docs/Resume - Engel Gatus.pdf" download>
 				Download Resume
 			</a>
@@ -231,18 +189,9 @@
 		<span>OR</span>
 	</div>
 
-
-		<!-- Contact -->
+	<!-- Contact -->
 	<div class="form-section" data-aos="fade-up">
 	<h3 id="contact">Contact me</h3>
-
-	<!-- Success/Fail messages -->
-	<p id="contact-success" style="display:none; color: #2b7a2f; margin-bottom: 16px;">
-		Thanks! Your message was sent.
-	</p>
-	<p id="contact-error" style="display:none; color: #b00020; margin-bottom: 16px;">
-		Sorry — something went wrong. Please try again.
-	</p>
 
 	<form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
 		<!-- Web3Forms access key -->
@@ -250,7 +199,7 @@
 
 		<input type="hidden" name="subject" value="SOMEONE MADE CONTACT" />
 
-		<!-- Honeypot: bots will fill this, humans won’t -->
+		<!-- Honeypot -->
 		<input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
 		<label for="name">Name</label>
@@ -289,7 +238,7 @@
 	});
 	</script>
 
-	<!-- Floating Navigation Menu -->
+	<!-- Floating Nav Menu -->
 
 	<nav class="floating-menu hidden">
 		<a href="#summary" class="nav-link" title="Summary">
@@ -307,7 +256,7 @@
 		<a href="#tech-stack" class="nav-link" title="Tech Stack">
 			<img src="assets/icons/tech-stack.gif" class="nav-icon" alt="Tech Icon">
 		</a>
-		<!-- contact -->
+		<!-- Contact -->
 		<a href="#contact" class="nav-link" title="Contact">
 			<img src="assets/icons/contact.gif" class="nav-icon" alt="Contact">
 		</a>
