@@ -1,0 +1,4 @@
+I used React npm run build, then copy the contents of the build folder then paste it onto my /portfolio.
+React app location: /Users/engelgatus/projects/portfolio-react
+Portfolio location: /Users/engelgatus/projects/portfolio (this is where I push to GitHub)
+Website hosts on GitHub Pages
