@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.002bb7b5.css",
-    "main.js": "/portfolio/static/js/main.272057a8.js",
+    "main.css": "/portfolio/static/css/main.5ba2c276.css",
+    "main.js": "/portfolio/static/js/main.77849a94.js",
+    "static/media/olj-scraperDemo.mp4": "/portfolio/static/media/olj-scraperDemo.1707287ae7fee79be14a.mp4",
+    "static/media/discord-cc.png": "/portfolio/static/media/discord-cc.a43bdb243c8ef9fea1a3.png",
+    "static/media/olj-scraper-thumb.png": "/portfolio/static/media/olj-scraper-thumb.cf60986c72b8521cd559.png",
     "static/media/Thorilat.otf": "/portfolio/static/media/Thorilat.5c5fed14babb28aba560.otf",
-    "static/media/sample.png": "/portfolio/static/media/sample.e798aa2e7349ce73f303.png",
     "static/media/og-image.png": "/portfolio/static/media/og-image.784de23c357da7aec4a3.png",
     "static/media/me-pixel-thumb.png": "/portfolio/static/media/me-pixel-thumb.e08b7471c3433fb11b41.png",
     "static/media/Dansk.ttf": "/portfolio/static/media/Dansk.520661ef784a61f8f58f.ttf",
     "index.html": "/portfolio/index.html",
-    "main.002bb7b5.css.map": "/portfolio/static/css/main.002bb7b5.css.map",
-    "main.272057a8.js.map": "/portfolio/static/js/main.272057a8.js.map"
+    "main.5ba2c276.css.map": "/portfolio/static/css/main.5ba2c276.css.map",
+    "main.77849a94.js.map": "/portfolio/static/js/main.77849a94.js.map"
   },
   "entrypoints": [
-    "static/css/main.002bb7b5.css",
-    "static/js/main.272057a8.js"
+    "static/css/main.5ba2c276.css",
+    "static/js/main.77849a94.js"
   ]
 }
